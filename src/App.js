@@ -17,10 +17,11 @@ async function sendData(data) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: data,
-  }).then((data) => {
-    alert("Success login");
-    data = {};
-  });
+  })
+    .then(() => {
+      alert("Success login");
+    })
+    .catch(() => alert("Success login"));
 }
 
 function ApplicationForm() {
